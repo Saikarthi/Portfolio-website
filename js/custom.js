@@ -128,14 +128,14 @@ $(document).ready(function () {
 
             },
             messages: {
-                name: {
+                "entry.1830511710": {
                     required: "This field is required",
                     minlength: "your name must consist of at least 2 characters"
                 },
-                email: {
+                "entry.762034388": {
                     required: "This field is required"
                 },
-                message: {
+                "entry.107307599": {
                     required: "This field is required"
                 }
             },
@@ -143,7 +143,7 @@ $(document).ready(function () {
                 $(form).ajaxSubmit({
                     type: "POST",
                     data: $(form).serialize(),
-                    url: "process.php",
+                    url: "https://docs.google.com/forms/d/e/1FAIpQLScn85dDD7XIxT9l_q980KhUOWen-XD8g7cUVyrZL1u6vLoZZA/formResponse",
                     success: function () {
                         $('#contact :input').attr('disabled', 'disabled');
                         $('#contact').fadeTo("slow", 1, function () {
@@ -153,8 +153,14 @@ $(document).ready(function () {
                         });
                     },
                     error: function () {
+                        // $('#contact').fadeTo("slow", 1, function () {
+                        //     $('#error').fadeIn();
+                        // });
+                        $('#contact :input').attr('disabled', 'disabled');
                         $('#contact').fadeTo("slow", 1, function () {
-                            $('#error').fadeIn();
+                            $(this).find(':input').attr('disabled', 'disabled');
+                            $(this).find('label').css('cursor', 'default');
+                            $('#success').fadeIn();
                         });
                     }
                 });
