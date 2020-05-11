@@ -37,7 +37,7 @@ h1 {
   font-family: "Playfair Display", serif;
   font-size: 60px;
   line-height: 70px;
-  color: #fff;
+  color: rgb(63, 63, 63);
 }
 
 h4 {
@@ -290,7 +290,22 @@ a.active {
   width: 100%;
 }
 
+
+#home h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 60px;
+  line-height: 70px;
+  color: #fff;
+}
+
 #home h4 {
+  font-family: "Lato", sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  position: relative;
+  color: rgb(26, 160, 250);
+  margin-left: 40px;
+  font-weight: 700;
   margin-top: 20px;
 }
 
@@ -329,9 +344,14 @@ a.active {
 /* experience section
 ==================================================*/
 
-#experience {
+#experience
+ {
   padding: 100px 0;
   background: #f3f3f3;
+}
+
+#experience1 {
+    padding: 100px 0;
 }
 
 .experience-row {
